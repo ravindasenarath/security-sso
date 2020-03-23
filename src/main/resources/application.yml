@@ -1,0 +1,55 @@
+server:
+  port: 8585
+
+security:
+  jwt:
+    key-store: classpath:security-sso.jks
+    key-store-password: ravinda
+    key-pair-alias: security-sso
+    key-pair-password: ravinda
+
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+autorization:
+  jwt:
+    rsa:
+      pvt: '-----BEGIN PRIVATE KEY-----
+        MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWdaCA1/jSZbnC
+        oXBX9ZTGaN+YPhDLJAwopPNG6n8uB32GFjQsOek0DuzvDP2b85tSC/FVnbjDMURJ
+        Tiv6nGibkGO6Zzq+YLq+DNNuo61BhLPZT+Lcbb8zXvpdWyDzG11yRLrBhFtZgj6a
+        xdLAVOH/4esQ8s/uxVtNHMk1G6394IOuHiG9YQc2q5ru3ACFqNUKy6PVPVPAZ+KJ
+        TrNVijcvPaPiBaZvUWIq3ZiQpYgRVupTYfZdp/jgCgGhzUsYw6CCE6Z0ndjipVMX
+        q3TAKdoIdfj38D/Wkfih/KD5mygUgzGwne9tkl2JMh5dK/FqIIvw6kNLOd3PZ2L4
+        NRoq3LLLAgMBAAECggEAaw/kWApWShCMsEwEDvL3HH//qutvM73A0SMe4TV3rh8y
+        WLlwApBqutpsCmZqCBC+UxGgdtW2ZV6nQqpXbQri/N8vt7JBALr/5sBlqvLZFCgD
+        efz4ZvXI+hr5eHih55tvUSJK6ezuu7CML8HYh3dfIZ92jybYgwT4RNTY7+t0UZPX
+        uRpcWKEFaNiIgr17R3QjddcXABRG7i6g3+pJRDbG0lZYUr2GuESO1/S3xXIInbFp
+        3ZuULBHVaRQxFnynZdBz6yPHOawEEwOsJE5gNdmi1ZEVm6/+cFG3JrIE/4LeTeGe
+        x6qj5yKEjAU4Vxmg3CtUzB+GZGxz3PSCMYJAHg4pkQKBgQDnoGIy7pz9DD+wa7yC
+        czAS29FI51NwtsaRrtZokBN82kmoe9Wgvf+h2FoqlTeDkhvknEYu2dTkY9zKCxPT
+        46b6UF5tOUSK8/o4cMGvDgp3jKJZO4NP8k55Ejwg4t/FBMCfaDXGSw+lIx0rNjpC
+        S74NsPMVyVDSHgeEgVVSCcIVhwKBgQCmSr6dYZIsH/VxqHlYbj0EIpn51aorZf/2
+        AlyTBatd9VzLxtwI9F9s1ZWfninLAwjfRZOYe3r5uVUdRKKTKGCAaAMj7KTMVxTF
+        kGGVoMP1NoQVtp6pKZiOb5wSxbfDzi6lbGCs39qnXgCi79yuZSqBXvUy3ZTP9XFl
+        dqQiYD5JnQKBgDgx9SEeOwA5pIoM2WNcxuEMa64gUWIbNfnKTUJ5EgFMhGpYAPBK
+        qGZ/swB5y0okfJfuQijDuJ7gi4SJQ3o41R4NuZsONc7weliPIq5x3aA7gnfbtHQE
+        +XzuK6Be6qNGD+Wcxs8hDt6lskH1mhTTg3yW3aL/gJg5qOFA745Dx86pAoGAP5oS
+        8crhx3Kpw8D2OHZha/V4AvBP1615irQ4iBsBAjzYMzBp9BrTbKL8SUKLJZSRjiPk
+        YcvIqz7RaRJZRAOLdVFS8iiOl4Eu9qlUSZBloqIpPszMPlMkgEX74coxkPiJKsga
+        6cPss1rmz2sCcslKypRxH/VT934e0vnfqS46ZJkCgYEArS/KJUzYU/1uK/CSuBzT
+        UmN+eZshvPW+D/AKjjCbxuGpfacd3U+Oj3C0bz04U+DjEevzmzOcRZnCmYqSFtqY
+        oBbKdSQ74alEhH6PEGft8h88tqjviaUCj56dNsDuX0jWZbiNxl2894XJj30mxUTE
+        IsU59fnnzdDzPsUpG+5eqf8=
+        -----END PRIVATE KEY-----'
+      pub: '-----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlnWggNf40mW5wqFwV/WU
+        xmjfmD4QyyQMKKTzRup/Lgd9hhY0LDnpNA7s7wz9m/ObUgvxVZ24wzFESU4r+pxo
+        m5Bjumc6vmC6vgzTbqOtQYSz2U/i3G2/M176XVsg8xtdckS6wYRbWYI+msXSwFTh
+        /+HrEPLP7sVbTRzJNRut/eCDrh4hvWEHNqua7twAhajVCsuj1T1TwGfiiU6zVYo3
+        Lz2j4gWmb1FiKt2YkKWIEVbqU2H2Xaf44AoBoc1LGMOgghOmdJ3Y4qVTF6t0wCna
+        CHX49/A/1pH4ofyg+ZsoFIMxsJ3vbZJdiTIeXSvxaiCL8OpDSzndz2di+DUaKtyy
+        ywIDAQAB
+        -----END PUBLIC KEY-----'
